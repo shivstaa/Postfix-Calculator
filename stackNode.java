@@ -1,20 +1,20 @@
 /**
  * @author: SHIV SHAH
- * FILENAME: Shah_Shiv_stackNode.java
+ * FILENAME: stackNode.java
  */
 
-public class Shah_Shiv_stackNode<TemplateType> {
+public class stackNode<TemplateType> {
 	private TemplateType data; //data being stored
-	private Shah_Shiv_stackNode<TemplateType> next; //pointer to the next node in the chain
+	private stackNode<TemplateType> next; //pointer to the next node in the chain
 	
 	//constructor
-	public Shah_Shiv_stackNode() {
+	public stackNode() {
 		data = null;
 		next = null;
 	}
 	
 	//overloaded constructor
-	public Shah_Shiv_stackNode(TemplateType data) { 
+	public stackNode(TemplateType data) { 
 		this.data = data;
 		next = null;
 	}
@@ -31,7 +31,7 @@ public class Shah_Shiv_stackNode<TemplateType> {
 	 * gets the next node from the stack (down from the top element in the stack)
 	 * @return this.next
 	 */
-	public Shah_Shiv_stackNode<TemplateType> getNext() { 
+	public stackNode<TemplateType> getNext() { 
 		return this.next;
 	}
 	
@@ -47,7 +47,7 @@ public class Shah_Shiv_stackNode<TemplateType> {
 	 * sets this.next to what the variable next is
 	 * @param next
 	 */
-	public void setNext(Shah_Shiv_stackNode<TemplateType> next) {
+	public void setNext(stackNode<TemplateType> next) {
 		this.next = next;
 	}
 }
