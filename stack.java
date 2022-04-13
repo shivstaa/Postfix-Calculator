@@ -5,8 +5,8 @@ import java.util.StringTokenizer;
  * @author: SHIV SHAH
  * FILENAME: Shah_Shiv_stack.java
  */
-public class Shah_Shiv_stack<TemplateType extends Comparable<TemplateType>> {
-	private Shah_Shiv_stackNode<TemplateType> head; //head pointer
+public class stack<TemplateType extends Comparable<TemplateType>> {
+	private stackNode<TemplateType> head; //head pointer
 	private int size; //variable size that will be used for the size of the stack at a given point and time
 	
 	public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class Shah_Shiv_stack<TemplateType extends Comparable<TemplateType>> {
 	 * @param item --> element added
 	 */
 	public void Push(TemplateType item) {
-		Shah_Shiv_stackNode<TemplateType> newNode = new Shah_Shiv_stackNode<TemplateType>(item); //object newNode of the TemplateType
+		stackNode<TemplateType> newNode = new stackNode<TemplateType>(item); //object newNode of the TemplateType
 		newNode.setNext(this.head); //sets the next element to the head
 		this.head = newNode; //sets the head to the node
 		this.size++; //increments size that tracks the length of the stack
@@ -37,7 +37,7 @@ public class Shah_Shiv_stack<TemplateType extends Comparable<TemplateType>> {
 		if(this.head == null) {
 			throw new NullPointerException("ERR: Can't delete from an empty stack");
 		}
-		Shah_Shiv_stackNode<TemplateType> storeHead = head; //sets a variable that will be discarded to the head
+		stackNode<TemplateType> storeHead = head; //sets a variable that will be discarded to the head
 		this.head = this.head.getNext(); //sets the head to the next value in the stack (top element removed, next element down is now head)
 		this.size--; //decrements size that tracks the length of the stack
 	}
@@ -65,7 +65,7 @@ public class Shah_Shiv_stack<TemplateType extends Comparable<TemplateType>> {
 	 * @param tokenizer  --> string that stores the tokenized output of the String storeInput
 	 */
 	public static void CalculateStack(String storeInput, StringTokenizer tokenizer) {
-		Shah_Shiv_stack<String> stack = new Shah_Shiv_stack<String>(); //creates a stack of the type String
+		stack<String> stack = new stack<String>(); //creates a stack of the type String
 		String convertChar; //used to store a character to String conversion
 		
 		System.out.print("\nRunning parentheses check... ... ... ");
