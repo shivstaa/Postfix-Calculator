@@ -3,7 +3,7 @@ import java.util.StringTokenizer;
 
 /**
  * @author: SHIV SHAH
- * FILENAME: Shah_Shiv_stack.java
+ * FILENAME: stack.java
  */
 public class stack<TemplateType extends Comparable<TemplateType>> {
 	private stackNode<TemplateType> head; //head pointer
